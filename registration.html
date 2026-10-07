@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Register | Utsav 2026 College Event Portal</title><meta name="description" content="Register for festival events.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/responsive.css">
+</head><body><div id="site-header"></div>
+<section class="page-hero"><div class="container"><h1 style="font-size:clamp(2rem,5vw,3rem)">Event registration</h1><p>Fill in your details to reserve a place.</p></div></section>
+<main class="section"><div class="container"><div class="form-card">
+<form id="regForm" novalidate><div class="form-grid">
+<div class="field"><label for="name">Student name</label><input id="name" autocomplete="name"><p class="err"></p></div>
+<div class="field"><label for="regno">Register number</label><input id="regno"><p class="err"></p></div>
+<div class="field"><label for="dept">Department</label><select id="dept"><option value="">Select department</option><option>Computer Science</option><option>Information Technology</option><option>Electronics</option><option>Electrical</option><option>Mechanical</option><option>Civil</option><option>Management</option></select><p class="err"></p></div>
+<div class="field"><label for="year">Year</label><select id="year"><option value="">Select year</option><option>1st year</option><option>2nd year</option><option>3rd year</option><option>4th year</option></select><p class="err"></p></div>
+<div class="field"><label for="email">Email</label><input id="email" type="email" autocomplete="email"><p class="err"></p></div>
+<div class="field"><label for="phone">Phone number</label><input id="phone" type="tel" inputmode="numeric" maxlength="10" autocomplete="tel"><p class="err"></p></div>
+<div class="field full"><label for="event">Event</label><select id="event"></select><p class="err"></p></div>
+<fieldset class="field"><legend>Gender</legend><div class="radios"><label><input type="radio" name="gender" value="Female">Female</label><label><input type="radio" name="gender" value="Male">Male</label><label><input type="radio" name="gender" value="Other">Other</label></div><p class="err" id="genderErr"></p></fieldset>
+<div class="field"><label for="college">College / institution</label><input id="college" value="Sample College of Engineering"><p class="err"></p></div>
+<div class="field full check"><label><input type="checkbox" id="terms"> I agree to the festival rules and terms and conditions.</label><p class="err" id="termsErr"></p></div></div>
+<div class="form-actions"><button class="btn btn-gold" type="submit">Submit registration</button><button class="btn btn-line" type="reset">Reset form</button></div></form>
+<div class="success" id="success" role="status"><i class="fa-solid fa-circle-check"></i><h2>You're registered!</h2><p>Thanks, <b id="regName"></b>. You are signed up for <b id="regEvent"></b>.</p><p style="margin-top:.5rem">Reference: <b id="refNo"></b></p><div class="form-actions" style="justify-content:center"><a class="btn btn-dark" href="schedule.html">View schedule</a><button class="btn btn-line" id="again" type="button">Register for another event</button></div></div></div></div></main>
+<div id="site-footer"></div><script src="js/data.js"></script><script src="js/main.js"></script>
+<script src="js/registration.js"></script>
+</body></html>
